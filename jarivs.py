@@ -164,6 +164,6 @@ if __name__ == "__main__":
             speak(temp3)
 
                     
-        # elif 'quit' or 'exit' in query:
-        #     speak("Thank you sir")
-        #     print(exit())
+         elif 'quit' or 'exit' in query:
+             speak("Thank you sir")
+              print(exit())
