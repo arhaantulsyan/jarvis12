@@ -10,7 +10,7 @@ import random
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-# print(voices[0].id)
+
 engine.setProperty('voice', voices[0])
 
 
@@ -30,7 +30,7 @@ def wishMe():
     speak("I am Jarvis Sir. Please tell me how may I help you")
 
 def takeCommand():
-    #It takes microphone input from the user and returns string output
+    
 
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     while True:
         query = takeCommand().lower()
 
-        # Logic for executing tasks based on query
+        
         if 'wikipedia' in query:
             print("Computer: Searching Wikipedia...")
             speak('Searching Wikipedia...')
@@ -75,6 +75,9 @@ if __name__ == "__main__":
         elif 'open youtube' in query:
             webbrowser.open("youtube.com")
             speak("opening Youtube.com")
+        elif 'open linkedin' in query:
+            webbrowser.open("linkedin.com")
+            speak("opening linkedin.com")
         elif 'open google' in query:
             webbrowser.open("google.com")
             speak("opening Google.com")
